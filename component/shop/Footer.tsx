@@ -8,20 +8,20 @@ const Footer = () => {
   return (
     <div className="w-full  border-t bottom-0 left-0 border-[var(--border)] relative tracking-tighter">
       <div className="flex flex-col gap-7 w-full px-6 pt-20">
-        <div className="flex gap-4 relative ">
+        <div className="flex flex-col sm:flex-row gap-4 relative ">
           <div className="container relative items-start flex flex-col">
             <Link href="/">
               <Image src={logo} alt="My E-Commerce logo" className="w-20 scale-130 translate-y-[-7px]" />
             </Link>
 
-            <p className="text-[var(--muted)] text-md text-start">
+            <p className="text-[var(--muted)] text-lg sm:text-sm md:text-base text-start">
               Defining the minimalist future of personal technology. Designed
               for the studio, built for the world.
             </p>
           </div>
           <div className="container relative items-start flex flex-col gap-3">
             <h3 className="font-bold ">Shop</h3>
-            <ul className="text-[var(--muted)] text-md text-start">
+            <ul className="text-[var(--muted)] text-lg sm:text-sm md:text-base text-start">
               <li>All Projucts</li>
               <li>New Realeases</li>
               <li>Special Offer</li>
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
           <div className="container relative items-start flex flex-col gap-3">
             <h3 className="font-bold ">Support</h3>
-            <ul className="text-[var(--muted)] text-md text-start">
+            <ul className="text-[var(--muted)] text-lg sm:text-sm md:text-base text-start">
               <li>Help Center</li>
               <li>Track Order</li>
               <li>Shipping & Returns</li>
@@ -48,12 +48,12 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex items-center w-full border-t border-gray-300 py-6 ">
-          <div className="container flex items-center justify-between relative">
-            <p className="text-[var(--muted)] text-md  ">© 2024 E-Commerce gadget. All rights reserved.</p>
+          <div className="container flex items-center justify-between relative flex-col sm:flex-row">
+            <p className="text-[var(--muted)] text-base  sm:text-sm md:text-base ">© 2024 E-Commerce gadget. All rights reserved.</p>
             <div className="flex center relative space-x-5 mx-0">
-              <p className="text-[var(--muted)] text-md">Privacy Policy</p>
-              <p className="text-[var(--muted)] text-md">Terms of Service</p>
-              <p className="text-[var(--muted)] text-md">Cookies</p>
+              <p className="text-[var(--muted)] text-base sm:text-sm md:text-base">Terms of Service</p>
+              <p className="text-[var(--muted)] text-base sm:text-sm md:text-base">Cookies</p>
+              <p className="text-[var(--muted)] text-base sm:text-sm md:text-base">Privacy Policy</p>
             </div>
           </div>
           
