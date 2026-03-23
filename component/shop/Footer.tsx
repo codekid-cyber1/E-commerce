@@ -40,8 +40,8 @@ const Footer = () => {
           <div className="container relative  flex flex-col gap-3">
             <h3 className="font-bold ">Contact</h3>
             <div className="flex relative items-center space-x-5">
-                <Link href= '/' className="items-center p-2 relative rounded-full justify-center bg-[var(--border)]"><Share2 size={16}/></Link>
-                <Link href= '/' className="items-center p-2 relative rounded-full justify-center bg-[var(--border)]"><Globe2 size={16}/></Link>
+                <Link href= '/' className="items-center p-2 relative rounded-full justify-center bg-[var(--border)] "><Share2 size={16}/></Link>
+                <Link href= '/' className="items-center p-2 relative rounded-full justify-center bg-[var(--border)] "><Globe2 size={16}/></Link>
                
                  
             </div>
