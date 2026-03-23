@@ -1,5 +1,4 @@
 import { show } from '@/lib/constants'
-import { div } from 'framer-motion/client'
 import React from 'react'
 
 const page = () => {
