@@ -56,8 +56,8 @@ const page = () => {
                 <Image
                   src={item.image}
                   alt={item.name}
-                  width={600}
-                  height={550}
+                  width={500}
+                  height={450}
                 />
               </div>
             </div>
