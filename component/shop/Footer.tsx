@@ -14,7 +14,7 @@ const Footer = () => {
               <Image src={logo} alt="My E-Commerce logo" className="w-20 scale-130 translate-y-[-7px]" />
             </Link>
 
-            <p className="text-[var(--muted)] text-lg sm:text-sm md:text-base text-start">
+            <p className="text-[var(--muted)] text-lg sm:text-sm md:text-base text-start tracking-tighter">
               Defining the minimalist future of personal technology. Designed
               for the studio, built for the world.
             </p>
