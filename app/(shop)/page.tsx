@@ -54,15 +54,15 @@ const page = () => {
                   </button>
                 </div>
               </div>
-              <div className="right-side relative  w-full h-[70vh] sm:h-[100vh] lg:w-150 lg:h-150">
+              <div className="right-side relative  w-100 h-89 sm:h-[100vh] lg:w-150 lg:h-150">
                 <Image
                   src={item.image}
                   alt={item.name}
                   fill
-                  className="object-cover rounded-lg lg:rounded-none scale-[90%] lg:scale-100"
+                  className="object-cover rounded-lg lg:rounded-none lg:scale-100"
                 />
               </div>
-              <div className=" flex lg:hidden gap-4 pb-5 w-full justify-around">
+              <div className=" flex lg:hidden gap-4 py-5 w-full justify-around">
                   <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Buy Now
                   </button>
