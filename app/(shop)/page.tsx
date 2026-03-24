@@ -1,5 +1,5 @@
 "use client";
-import { show } from "@/lib/constants";
+import { show, trending } from "@/lib/constants";
 import React from "react";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
@@ -7,6 +7,34 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Link from "next/link";
 import { Headphones, Laptop, Smartphone, Watch } from "lucide-react";
+
+interface ArrowProps {
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: () => void;
+}
+
+function SampleNextArrow(props: ArrowProps) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "var(--muted)", borderRadius: "50%" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props: ArrowProps) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "var(--muted)", borderRadius: "50%", }}
+      onClick={onClick}
+    />
+  );
+}
 
 const Page = () => {
   const settings = {
@@ -18,6 +46,45 @@ const Page = () => {
     autoplaySpeed: 6000,
     pauseOnHover: true,
   };
+
+  
+
+  const setting = {
+     dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  }
 
 
   return (
@@ -139,6 +206,25 @@ const Page = () => {
           </p>
         </div>
       </div>
+      </div>
+      <div className="w-full">
+        <Slider {...setting}>
+          {trending.map((item)=>(
+            <div key={item.id} className="outline-none">
+              <div className="flex flex-col  justify-center gap-2 relative max-w-sm rounded-sm overflow-hidden cursor-pointer">
+            <Image src={item.image} alt={item.name} width={248} height={248}/>
+            <div className="flex flex-col justify-center gap-1 p-2">
+              <p className="text-[var(--muted)] text-sm">{item.type}</p>
+            <p className="text-[var(--foreground)] font-bold text-lg ">{item.name}</p>
+            <p className="text-[var(--accent)] font-bold" >{item.price}</p>
+            </div>
+            
+          </div>
+            </div>
+          
+        ))}
+        </Slider>
+        
       </div>
     </div>
   );
