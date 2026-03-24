@@ -242,17 +242,17 @@ const Page = () => {
           ))}
         </Slider>
       </div>
-      <div className="w-full mt-12 bg-[var(--foreground)] rounded-lg flex flex-col items-center justify-center gap-2 py-20">
+      <div className="w-full mt-12 bg-[var(--foreground)] rounded-lg flex flex-col items-center justify-center gap-2 py-20 px-4 ">
         <h3 className="text-2xl font-bold text-[var(--background)]">
           Stay ahead of the curve
         </h3>
-        <p className="text-sm text-center text-[var(--muted)] w-[30%]">
+        <p className="text-sm text-center text-[var(--muted)] md:w-[30%]">
           Join our inner circle for early access to product launches and
           exclusive studio drops.
         </p>
         <form className="flex justify-center items-center py-4 gap-4 flex-col sm:flex-row">
           
-          <div className="w-sm">
+          <div className="sm:w-sm w-xs">
             <input
               className="bg-[var(--background)] appearance-none border-2 border-[var(--muted)] rounded w-full py-2 px-4 text-[var(--muted)] leading-tight focus:outline-none focus:bg-white focus:border-[var(--accent)]"
               type="text"
