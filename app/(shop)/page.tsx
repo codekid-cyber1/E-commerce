@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Link from "next/link";
+
+
 import {
   ArrowRight,
   Headphones,
@@ -27,9 +29,11 @@ function SampleNextArrow(props: ArrowProps) {
       className={className}
       style={{
         ...style,
-        display: "block",
-        background: "var(--muted)",
+        display: style?.display || "block",
+        // background: "var(--muted)",
         borderRadius: "50%",
+        right: "10px",
+        zIndex: 10,
       }}
       onClick={onClick}
     />
@@ -43,9 +47,11 @@ function SamplePrevArrow(props: ArrowProps) {
       className={className}
       style={{
         ...style,
-        display: "block",
-        background: "var(--muted)",
+        display: style?.display || "block",
+        // background: "var(--muted)",
         borderRadius: "50%",
+        left: "10px",
+        zIndex: 10,
       }}
       onClick={onClick}
     />
@@ -61,6 +67,7 @@ const Page = () => {
     autoplay: true,
     autoplaySpeed: 6000,
     pauseOnHover: true,
+    arrows: false,
   };
 
   const setting = {
@@ -87,7 +94,7 @@ const Page = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2,
+          arrows: false,
         },
       },
       {
@@ -95,6 +102,7 @@ const Page = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
         },
       },
     ],
@@ -159,53 +167,52 @@ const Page = () => {
       </Slider>
       <div className="flex container w-full justify-center border-b border-[var(--border)] my-8  relative">
         <div className="w-90 flex  justify-between ">
-          <div className="group relative hover:border-b-2  border-[var(--accent)] flex flex-col gap-2 py-2 cursor-pointer items-center">
-            <Link
-              href="/"
+          <Link href="/products?category=laptop" className="group relative hover:border-b-2  border-[var(--accent)] flex flex-col gap-2 py-2 cursor-pointer items-center">
+            <div
               className="group-hover:text-[var(--accent)] text-[var(--muted)] transition-colors"
             >
               <Laptop size={20} />
-            </Link>
+            </div>
             <p className="group-hover:text-[var(--foreground)] text-[var(--muted)] transition-colors text-sm">
               Laptop
             </p>
-          </div>
-          <div className="group relative hover:border-b-2  border-[var(--accent)] flex flex-col gap-2 py-2 cursor-pointer items-center">
-            <Link
-              href="/"
+
+
+
+          </Link>
+          <Link href="/products?category=Smartphone" className="group relative hover:border-b-2  border-[var(--accent)] flex flex-col gap-2 py-2 cursor-pointer items-center">
+            <div
               className="group-hover:text-[var(--accent)] text-[var(--muted)] transition-colors"
             >
               <Smartphone size={20} />
-            </Link>
+            </div>
             <p className="group-hover:text-[var(--foreground)] text-[var(--muted)] transition-colors text-sm">
               Smartphone
             </p>
-          </div>
-          <div className="group relative hover:border-b-2  border-[var(--accent)] flex flex-col gap-2 py-2 cursor-pointer items-center">
-            <Link
-              href="/"
+          </Link>
+          <Link href="/products?category=Headphones" className="group relative hover:border-b-2  border-[var(--accent)] flex flex-col gap-2 py-2 cursor-pointer items-center">
+            <div
               className="group-hover:text-[var(--accent)] text-[var(--muted)] transition-colors"
             >
               <Headphones size={20} />
-            </Link>
+            </div>
             <p className="group-hover:text-[var(--foreground)] text-[var(--muted)] transition-colors text-sm">
               Headphones
             </p>
-          </div>
-          <div className="group relative hover:border-b-2  border-[var(--accent)] flex flex-col gap-2 py-2 cursor-pointer items-center">
-            <Link
-              href="/"
+          </Link>
+          <Link href="/products?category=Watch" className="group relative hover:border-b-2  border-[var(--accent)] flex flex-col gap-2 py-2 cursor-pointer items-center">
+            <div
               className="group-hover:text-[var(--accent)] text-[var(--muted)] transition-colors"
             >
               <Watch size={20} />
-            </Link>
+            </div>
             <p className="group-hover:text-[var(--foreground)] text-[var(--muted)] transition-colors text-sm">
               Watch
             </p>
-          </div>
+          </Link>
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full overflow-hidden">
         <h2 className="text-lg sm:text-2xl font-bold text-[var(--foreground)] mb-1">
           Trending Products
         </h2>
@@ -251,7 +258,7 @@ const Page = () => {
           exclusive studio drops.
         </p>
         <form className="flex justify-center items-center py-4 gap-4 flex-col sm:flex-row">
-          
+
           <div className="sm:w-sm w-xs">
             <input
               className="bg-[var(--background)] appearance-none border-2 border-[var(--muted)] rounded w-full py-2 px-4 text-[var(--muted)] leading-tight focus:outline-none focus:bg-white focus:border-[var(--accent)]"
