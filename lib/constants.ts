@@ -78,7 +78,7 @@ export const AllProducts = [
     image: "/macbook.svg",
     rating: 5,
     reviews: 124,
-    category: "laptop",
+    category: "Laptop",
     tag: "BEST SELLER",
   },
   {
@@ -100,7 +100,7 @@ export const AllProducts = [
     image: "/macbook.svg",
     rating: 5,
     reviews: 124,
-    category: "laptop",
+    category: "Laptop",
     tag: "BEST SELLER",
   },
   {
@@ -145,7 +145,7 @@ export const AllProducts = [
     image: "/xps.svg",
     rating: 4,
     reviews: 56,
-    category: "laptop",
+    category: "Laptop",
     tag: "15% OFF",
   },
   {
@@ -181,7 +181,7 @@ export const AllProducts = [
     image: "/xps.svg",
     rating: 4,
     reviews: 56,
-    category: "laptop",
+    category: "Laptop",
     tag: "15% OFF",
   },
   {
@@ -236,7 +236,7 @@ export const AllProducts = [
     image: "/zenbook.svg",
     rating: 4,
     reviews: 42,
-    category: "laptop",
+    category: "Laptop",
     tag: null,
   },
   {

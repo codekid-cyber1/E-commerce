@@ -1,6 +1,5 @@
 "use client";
 import { show, trending } from "@/lib/constants";
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -88,7 +87,7 @@ const Page = () => {
       <div className="flex container w-full justify-center border-b border-[var(--border)] my-8 relative">
         <div className="w-90 flex  justify-between ">
           <Link
-            href="/products?category=laptop"
+            href="/products?category=Laptop"
             className="group relative hover:border-b-2  border-[var(--accent)] flex flex-col gap-2 py-2 cursor-pointer items-center"
           >
             <div className="group-hover:text-[var(--accent)] text-[var(--muted)] transition-colors">
