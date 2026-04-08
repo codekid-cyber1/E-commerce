@@ -1,3 +1,4 @@
+import { image } from "framer-motion/client";
 
 export const show = [
   {
@@ -6,6 +7,7 @@ export const show = [
     edition: "Titanium Edition",
     image: "/phone.svg",
     discription: "Experience the world's most powerful camera system in a smartphone. Faster than ever.",
+    price: 999.00,
   },
   {
     id: "2",
@@ -13,6 +15,7 @@ export const show = [
     edition: "Titanium Edition",
     image: "/laptop.svg",
     discription: "Experience the world's most powerful camera system in a smartphone. Faster than ever.",
+    price: 1499.00,
   },
   {
     id: "3",
@@ -20,51 +23,76 @@ export const show = [
     edition: "Titanium Edition",
     image: "/headset.svg",
     discription: "Experience the world's most powerful camera system in a smartphone. Faster than ever.",
+    price: 349.00,
   },
 ];
 
 export const trending = [
   {
-    id: "1",
+    id: "t1",
     name: "Acoustic Pro Gen 3",
+    brand: "G-Tech",
     type: "AUDIO",
+    category: "Headphones",
     image: "/Acoustic.svg",
-    price: "$299.00",
+    price: 299.00,
+    rating: 5,
+    reviews: 134,
   },
   {
-    id: "2",
+    id: "t2",
     name: "Book Air 15",
+    brand: "Apple",
     type: "LAPTOPS",
+    category: "Laptop",
     image: "/Book.svg",
-    price: "$1,299.00",
+    price: 1299.00,
+    rating: 5,
+    reviews: 210,
   },
   {
-    id: "3",
+    id: "t3",
     name: "Tab X Ultra",
+    brand: "Samsung",
     type: "TABLETS",
+    category: "Tablet",
     image: "/Tab.svg",
-    price: "$649.00",
+    price: 649.00,
+    rating: 4,
+    reviews: 89,
   },
   {
-    id: "4",
-    name: " Pulse Watch 4",
-    type: "WEAREABLES",
+    id: "t4",
+    name: "Pulse Watch 4",
+    brand: "HealthTech",
+    type: "WEARABLES",
+    category: "Watch",
     image: "/Watch.svg",
-    price: "$199.00",
+    price: 199.00,
+    rating: 4,
+    reviews: 430,
   },
   {
-    id: "5",
+    id: "t5",
     name: "Book Air 15",
+    brand: "Apple",
     type: "LAPTOPS",
+    category: "Laptop",
     image: "/Book.svg",
-    price: "$1,299.00",
+    price: 1299.00,
+    rating: 5,
+    reviews: 210,
   },
   {
-    id: "6",
+    id: "t6",
     name: "Acoustic Pro Gen 3",
+    brand: "G-Tech",
     type: "AUDIO",
+    category: "Headphones",
     image: "/Acoustic.svg",
-    price: "$299.00",
+    price: 299.00,
+    rating: 5,
+    reviews: 134,
   },
 ];
 
@@ -293,5 +321,67 @@ export const AllProducts = [
     reviews: 208,
     category: "Headphones",
     tag: "LIMITED",
+  },
+];
+
+
+export const SideImg = [
+  {
+    id: 1,
+    image: '/flat.svg',
+  },
+  {
+    id: 2,
+    image: '/control.svg',
+  },
+  {
+    id: 3,
+    image: '/usb.svg',
+  },
+  {
+    id: 4,
+    image: '/box.svg',
+  },
+]
+export const related = [
+  {
+    id: "r1",
+    name: 'G-Tech Wireless Controller',
+    brand: 'G-Tech',
+    category: 'Accessories',
+    image: '/pad.svg',
+    price: 1250.00,
+    rating: 4,
+    reviews: 65,
+  },
+  {
+    id: "r2",
+    name: 'Sonic Pro Audio Headset',
+    brand: 'Sonic',
+    category: 'Headphones',
+    image: '/white.svg',
+    price: 2250.00,
+    rating: 5,
+    reviews: 142,
+  },
+  {
+    id: "r3",
+    name: 'G-Tech Vertical Stand',
+    brand: 'G-Tech',
+    category: 'Accessories',
+    image: '/wood.svg',
+    price: 4250.00,
+    rating: 4,
+    reviews: 28,
+  },
+  {
+    id: "r4",
+    name: 'Ambient Light Sync Kit',
+    brand: 'G-Tech',
+    category: 'Accessories',
+    image: '/light.svg',
+    price: 7250.00,
+    rating: 5,
+    reviews: 95,
   },
 ];

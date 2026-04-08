@@ -13,6 +13,7 @@ import {
   Smartphone,
   Watch,
 } from "lucide-react";
+import BuyNow from "@/component/shop/BuyNow";
 
 const settings = {
   dots: true,
@@ -27,7 +28,7 @@ const settings = {
 
 const Page = () => {
   return (
-    <div className="p-6">
+    <div className="p-6 mt-16">
       <Slider {...settings}>
         {show.map((item) => (
           <div key={item.id} className=" outline-none">
@@ -55,9 +56,7 @@ const Page = () => {
                   {item.discription}
                 </p>
                 <div className=" hidden lg:flex gap-4">
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Buy Now
-                  </button>
+                  <BuyNow product={item} />
                   <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                     Learn More
                   </button>
@@ -72,14 +71,12 @@ const Page = () => {
                 />
               </div>
               <div className=" flex lg:hidden gap-4 py-5 w-full justify-around">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                  Buy Now
-                </button>
+                <BuyNow product={item} />
                 <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                   Learn More
                 </button>
               </div>
-            </div>
+            </div> 
           </div>
         ))}
       </Slider>
@@ -151,7 +148,7 @@ const Page = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
           {trending.map((item) => (
-            <div key={item.id} className=" outline-none">
+            <Link href={`/products/${item.id}`} key={item.id} className=" outline-none">
               <div className="flex flex-col   gap-4 relative max-w-sm rounded-sm overflow-hidden cursor-pointer">
                 <Image
                   src={item.image}
@@ -162,13 +159,13 @@ const Page = () => {
                 />
                 <div className="flex flex-col justify-center gap-1 p-2">
                   <p className="text-[var(--muted)] text-sm">{item.type}</p>
-                  <p className="text-[var(--foreground)] font-bold text-lg ">
+                  <p className="text-[var(--foreground)] font-bold text-lg hover:underline">
                     {item.name}
                   </p>
-                  <p className="text-[var(--accent)] font-bold">{item.price}</p>
+                  <p className="text-[var(--accent)] font-bold">₦{item.price.toLocaleString()}</p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

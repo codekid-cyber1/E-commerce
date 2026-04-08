@@ -1,12 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import logo from "@/public/e-commerce_logo.png";
-import { Search, ShoppingCart, User } from "lucide-react";
+import { Search, User } from "lucide-react";
 import Link from "next/link";
+import NavbarCartIcon from "./NavbarCartIcon";
 
 const Navbar = () => {
   return (
-    <nav className="w-full h-[81px] bg-white position-fixed z-50 top-0 left-0 border-b border-[var(--border)] px-4 md:px-6 tracking-tighter">
+    <nav className="w-full h-[81px] bg-white fixed z-50 top-0 left-0 border-b border-[var(--border)] px-4 md:px-6 tracking-tighter">
       <div className="container mx-auto h-full flex items-center justify-between ">
         <Link href="/">
           <Image src={logo} alt="My E-Commerce logo" className=" w-27 " />
@@ -31,7 +32,7 @@ const Navbar = () => {
         <div className="relative flex items-center justify-between space-x-5">
           <Search className="text-black w-6 h-6 cursor-pointer sm:hidden flex" />  
           <User className="text-black w-6 h-6 cursor-pointer" />
-          <ShoppingCart className="text-black w-6 h-6 cursor-pointer" />
+          <NavbarCartIcon />
         </div>
       </div>
     </nav>
