@@ -16,10 +16,17 @@ export type CartAction =
   | { type: "ADD_TO_CART"; payload: CartItemType }
   | { type: "INCREMENT"; payload: string | number }
   | { type: "DECREMENT"; payload: string | number }
-  | { type: "REMOVE_FROM_CART"; payload: string | number };
+  | { type: "REMOVE_FROM_CART"; payload: string | number }
+  | { type: "INITIALIZE_CART"; payload: CartItemType[] };
 
 export function CartReducer(state: CartState, action: CartAction): CartState {
   switch (action.type) {
+    case "INITIALIZE_CART": {
+      return {
+        ...state,
+        cartItems: action.payload,
+      };
+    }
     case "ADD_TO_CART": {
       const item = action.payload;
       const existItem = state.cartItems.find(
