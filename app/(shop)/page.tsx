@@ -1,9 +1,5 @@
-"use client";
 import { show, trending } from "@/lib/constants";
 import Image from "next/image";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import Link from "next/link";
 
 import {
@@ -14,22 +10,14 @@ import {
   Watch,
 } from "lucide-react";
 import BuyNow from "@/component/shop/BuyNow";
+import Carousel from "@/component/ui/Carousel";
 
-const settings = {
-  dots: true,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 6000,
-  pauseOnHover: true,
-  arrows: false,
-};
 
-const Page = () => {
+
+export default function Page () {
   return (
     <div className="p-6 mt-16">
-      <Slider {...settings}>
+      <Carousel>
         {show.map((item) => (
           <div key={item.id} className=" outline-none">
             <div className=" w-full bg-gray-100 rounded-lg flex flex-col lg:flex-row items-center justify-between relative  overflow-hidden">
@@ -79,7 +67,8 @@ const Page = () => {
             </div> 
           </div>
         ))}
-      </Slider>
+      </Carousel>
+      
 
       <div className="flex container w-full justify-center border-b border-[var(--border)] my-8 relative">
         <div className="w-90 flex  justify-between ">
@@ -197,6 +186,4 @@ const Page = () => {
       </div>
     </div>
   );
-};
-
-export default Page;
+} ;

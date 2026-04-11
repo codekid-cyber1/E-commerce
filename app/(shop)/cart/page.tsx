@@ -14,7 +14,7 @@ export default function CartPage() {
       <div className="flex flex-col mt-16 items-center justify-center min-h-[50vh] text-center px-4">
         <h2 className="text-3xl font-extrabold mb-4 text-[var(--foreground)] tracking-tight">Your cart is empty</h2>
         <p className="text-[var(--muted)] mb-8 max-w-md">
-          Looks like you haven&apos;t added anything to your cart yet. Browse our premium collections to find something you'll love.
+          Looks like you haven&apos;t added anything to your cart yet. Browse our premium collections to find something you&apos;ll love.
         </p>
         <Link href="/products" className="bg-[var(--foreground)] text-[var(--background)] px-8 py-4 rounded-full font-bold hover:opacity-90 transition-opacity flex items-center justify-center shadow-lg shadow-black/10">
           Start Shopping

@@ -1,4 +1,4 @@
-import { ChevronRight, Heart, LucideShoppingCart, Star } from "lucide-react";
+import { ChevronRight, Heart, Star } from "lucide-react";
 import React from "react";
 import Image from "next/image";
 import AddToCartIcon from "@/component/shop/AddToCartIcon";

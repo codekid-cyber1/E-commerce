@@ -4,6 +4,7 @@ import logo from "@/public/e-commerce_logo.png";
 import { Search, User } from "lucide-react";
 import Link from "next/link";
 import NavbarCartIcon from "./NavbarCartIcon";
+import { Show, UserButton,} from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -30,8 +31,16 @@ const Navbar = () => {
           </div>
         </form>
         <div className="relative flex items-center justify-between space-x-5">
-          <Search className="text-black w-6 h-6 cursor-pointer sm:hidden flex" />  
-          <User className="text-black w-6 h-6 cursor-pointer" />
+          <Search className="text-black w-6 h-6 cursor-pointer sm:hidden flex" />
+          <Show when="signed-in">
+            <UserButton />
+          </Show>
+          <Show when="signed-out">
+            <Link href="/sign-in">
+              <User className="text-black w-6 h-6 cursor-pointer" />
+            </Link>
+          </Show>
+
           <NavbarCartIcon />
         </div>
       </div>
